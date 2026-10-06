@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ÉTER // Protocolo Sarah</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app" class="insanity-stable">
+    <header class="header">
+      <div class="header-left">
+        <h1 class="title">ÉTER<span class="title-sub"> // Protocolo Sarah</span></h1>
+        <p class="subtitle">Laboratório Subterrâneo · Setor 7</p>
+        <p class="scientist-line">Cientista responsável: <strong id="scientist-label">—</strong></p>
+      </div>
+      <div class="sanity-panel">
+        <div class="sanity-label">
+          <span>SANIDADE</span>
+          <span id="sanity-value">100%</span>
+        </div>
+        <div class="sanity-bar-track">
+          <div id="sanity-bar" class="sanity-bar-fill" style="width: 100%"></div>
+        </div>
+        <div id="sanity-status" class="sanity-status">ESTÁVEL</div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="terminal-frame">
+        <div class="terminal-header">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <span class="terminal-title">LOG_NARRATIVO.exe</span>
+        </div>
+        <div id="story-box" class="story-box" aria-live="polite"></div>
+      </div>
+
+      <div id="choices-container" class="choices-container"></div>
+
+      <div id="ending-actions" class="ending-actions hidden">
+        <button id="restart-btn" class="btn btn-restart" type="button">Reiniciar História</button>
+      </div>
+
+      <aside class="flowchart-panel" aria-label="Fluxograma da narrativa">
+        <h2 class="flowchart-title">FLUXOGRAMA · caminho percorrido</h2>
+        <div id="path-log" class="path-log">Fluxograma: aguardando decisões...</div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <span>Projeto Éter · Acesso Restrito</span>
+    </footer>
+  </div>
+
+  <!-- script.js único: funciona ao abrir o HTML direto no navegador (file://) -->
+  <script src="script.js"></script>
+</body>
+</html>
